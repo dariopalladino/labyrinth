@@ -1,0 +1,29 @@
+# Include documentation and metadata files
+include README.md
+include LICENSE
+include CONTRIBUTING.md
+include MANIFEST.in
+include Makefile
+
+# Include configuration examples
+recursive-include examples *.py *.env.example
+
+# Include tests (optional - some prefer to exclude)
+recursive-include tests *.py
+
+# Include type information
+recursive-include labyrinth py.typed
+
+# Exclude development and build artifacts
+exclude .gitignore
+recursive-exclude . __pycache__
+recursive-exclude . *.py[co]
+recursive-exclude . *.so
+recursive-exclude . .DS_Store
+exclude .coverage
+exclude .pytest_cache
+exclude htmlcov
+exclude build
+exclude dist
+exclude *.egg-info
+exclude venv
